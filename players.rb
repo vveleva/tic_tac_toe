@@ -23,6 +23,7 @@ class ComputerPlayer
   end
 
   def move
+    # genius AI to be implemented
     [rand(0...size), rand(0...size)]
   end
 end
