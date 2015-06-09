@@ -58,13 +58,13 @@ class Game
 
   def won?
     board.grid.each do |row|
-      return "x" if row.all? { |x| x == "x" }
-      return "o" if row.all? { |x| x == "o" }
+      return "x" if row.all? { |i| i == "x" }
+      return "o" if row.all? { |i| i == "o" }
     end
 
     board.grid.transpose.each do |row|
-      return "x" if row.all? { |x| x == "x" }
-      return "o" if row.all? { |x| x == "o" }
+      return "x" if row.all? { |i| i == "x" }
+      return "o" if row.all? { |i| i == "o" }
     end
 
     return "x" if (0..2).all? { |i| board[i, i] == "x" }
